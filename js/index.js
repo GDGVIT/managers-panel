@@ -48,6 +48,6 @@ var getCookie = (name) => {
 checkCookie = () => {
     var token = getCookie('token')
     if(token != 'undefined'){
-        window.location.href="/panel.html?" + token;
+        window.location.href="managers-panel/panel.html?" + token;
     }
 }   
