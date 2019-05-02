@@ -34,30 +34,21 @@
             storageBucket: "manager-26ca8.appspot.com",
             messagingSenderId: "240147178566"
         };
-        
         firebase.initializeApp(config);
+
+        var token = decodeURIComponent(document.cookie);
         </script>
 
         <!-- Linking JS Files -->
-        <script src="js/index.js"></script>
+        <script src="js/panel.js"></script>
+
+        <div id="signout-button">
+            Signout
+        </div>
         
         <div class="main">
             
-            <div class="signin-holder">
-
-                <h1>Login to access manager panel</h1>
-
-                <h3 id="error-display"></h3>
-
-                <input type="text" name="Username" placeholder="Email" id="sigin-email">
-
-                <input type="password" name="Password" placeholder="Password" id="sigin-password">
-
-                <input type="submit" name="Login" id="submit-button" value="Login">
-
-                <input type="button" name="GoogleLogin" id="google-login-button" value="Google Login">
-
-            </div>
+            <h1>Logged in</h1>
 
         </div>
 
