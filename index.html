@@ -1,0 +1,64 @@
+<html lang="en">
+    <head>
+
+        <!-- Linking CSS files -->
+        <link rel="stylesheet" href="css/index.css">
+
+        <!-- Meta tags for SEO and Responsive Website Management -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Title of the Website -->
+        <title>Managers Panel</title>
+
+        <!-- Firebase -->
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+        
+    </head>
+
+    <body>
+
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAUGIcGAInT6xMGd51ZC7w45mSXwpmuN90",
+            authDomain: "manager-26ca8.firebaseapp.com",
+            databaseURL: "https://manager-26ca8.firebaseio.com",
+            projectId: "manager-26ca8",
+            storageBucket: "manager-26ca8.appspot.com",
+            messagingSenderId: "240147178566"
+        };
+        firebase.initializeApp(config);
+        </script>
+
+        <!-- Linking JS Files -->
+        <script src="js/index.js"></script>
+        
+        <div class="main">
+            
+            <div class="signin-holder">
+
+                <h1>Login to access manager panel</h1>
+
+                <h3 id="error-display">None</h3>
+
+                <input type="text" name="Username" placeholder="Email" id="sigin-email">
+
+                <input type="password" name="Password" placeholder="Password" id="sigin-password">
+
+                <input type="submit" name="Login" id="submit-button" value="Login">
+
+                <input type="button" name="GoogleLogin" id="google-login-button" value="Google Login">
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
