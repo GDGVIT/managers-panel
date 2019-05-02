@@ -11,7 +11,7 @@ $(document).ready(() => {
 })
 
 eraseCookie = () => {
-    window.location.href = "/index.html?" + "signout";
+    window.location.href = "managers-panel/index.html?" + "signout";
 } 
 
 let displayEvents = (eventsList) => {
