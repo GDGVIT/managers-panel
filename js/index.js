@@ -24,13 +24,13 @@ $(document).ready( () => {
     })
 
     $('#google-login-button').click(() => {
-        firebase.auth().signInWithPopup(provider).then(function(result) {
-            cookieToken(result.credential.accessToken)
+        firebase.auth().signInWithRedirect(provider).then(function(result) {
+            console.log(result)
             checkCookie();
-          }).catch(function(error) {
+        }).catch(function(error) {
             document.getElementById('error-display').innerHTML = error.message
             checkCookie();
-          });
+        });
     })
 
 })
@@ -47,7 +47,6 @@ var getCookie = (name) => {
 
 checkCookie = () => {
     var token = getCookie('token')
-    alert(token)
     if(token != 'undefined'){
         window.location.href="/panel.html?" + token;
     }
